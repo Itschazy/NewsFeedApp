@@ -6,6 +6,8 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
+    <color name="article_bottom_tint">#CE000000</color>
+    <color name="article_main_tint">#5C000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="label_today_color">#FF7847</color>
     <color name="date_color">#9A9A9A</color>

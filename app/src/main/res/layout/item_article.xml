@@ -3,60 +3,85 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="8dp"
-    android:layout_marginTop="4dp"
-    android:layout_marginEnd="8dp"
-    android:layout_marginBottom="4dp"
-    android:background="@drawable/item_category_border"
-    android:elevation="8dp"
-    app:cardCornerRadius="4dp">
+    android:layout_height="128dp"
+    android:layout_margin="8dp"
+    android:background="@drawable/item_article_border"
+    android:elevation="8dp">
+
 
 
     <ImageView
-        android:id="@+id/iv_category_avatar"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_margin="12dp"
+
+        android:id="@+id/iv_article_img"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="center"
+        android:tint="@color/article_main_tint"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:srcCompat="@tools:sample/avatars">
+    </ImageView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/layout_shadow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/iv_article_img"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:backgroundTint="@color/black"
+        app:layout_constraintTop_toTopOf="@id/iv_article_img"
+        app:layout_constraintStart_toStartOf="@id/iv_article_img"/>
 
     <TextView
-        android:id="@+id/tv_category_name"
+        android:id="@+id/tv_article_title"
+        android:padding="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_toEndOf="@+id/iv_category_avatar"
-        android:lines="1"
-        android:textColor="@color/black"
+        android:fontFamily="@font/article_title_font"
+        android:layout_marginStart="8dp"
+        android:gravity="left"
+        android:includeFontPadding="false"
+        android:lines="2"
+        android:textColor="@color/white"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/iv_category_avatar"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Открытки" />
+        tools:textColor="@color/black"
+        tools:text="Article example" />
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_article_date"-->
+<!--        android:padding="8dp"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:fontFamily="@font/nunito_semibold"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="12sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        tools:textColor="@color/black"-->
+<!--        tools:text="12.01.2021" />-->
 
     <TextView
-        android:id="@+id/tv_lable_today"
+        android:id="@+id/tv_article_author"
+        android:padding="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounder_corner_today_label"
-        android:padding="4dp"
+        android:fontFamily="@font/nunito_semibold"
         android:textColor="@color/white"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Сегодня" />
-
-    <TextView
-        android:id="@+id/category_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/date_color"
-        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+
+        tools:textColor="@color/black"
         tools:text="12.01.2021" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
